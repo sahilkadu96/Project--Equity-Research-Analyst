@@ -2,6 +2,7 @@
 Using LLM - OpenAI ChatGPT with Langchain.
 Storing data from given websites into FAISS vector database.
 Then quering to get the relevant output & its source.
+Deploying the app to Streamlit
 
 # Streamlit interface
 
