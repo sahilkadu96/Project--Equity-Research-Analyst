@@ -11,9 +11,14 @@ import streamlit as st
 import time
 import pickle
 
-os.environ['OPENAI_API_KEY'] = ''
 
-llm = OpenAI(temperature=0.9)
+st.title('Equity Research Analyst')
+
+api_key = st.text_input('Enter OpenAI API key')
+
+if api_key:
+  os.environ['OPENAI_API_KEY'] = api_key
+  llm = OpenAI(temperature=0.9)
 
 urls = []
 for i in range(3):
@@ -57,6 +62,7 @@ if query:
             vectorstore = pickle.load(f)
             chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vectorstore.as_retriever())
             result = chain({"question": query}, return_only_outputs=True)
+
             # result will be a dictionary of this format --> {"answer": "", "sources": [] }
             st.header("Answer")
             st.write(result["answer"])
