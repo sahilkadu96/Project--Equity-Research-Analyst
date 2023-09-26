@@ -6,4 +6,5 @@ Deploying the app to Streamlit
 
 # Streamlit interface
 
-![image](https://github.com/sahilkadu96/Project--Equity-Research-Analyst/assets/106151994/0c0585c8-8fa2-49da-8ac1-35e36295a9f8)
+
+![image](https://github.com/sahilkadu96/Project--Equity-Research-Analyst/assets/106151994/2a2734b1-4a84-4343-a6ea-4f5f29e553d8)
